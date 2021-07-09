@@ -1,3 +1,6 @@
+Link to the live project : https://leau-void.github.io/google-homepage/
+
+
 This is a project I completed as part of The Odin Project's Foundation Path.
 The assignments was to make a clone of the Google homepage(obviously). 
 
