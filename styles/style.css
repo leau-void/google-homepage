@@ -9,7 +9,7 @@ html {
 }
 body {
     font-family: Arial, sans-serif;
-    width: 100vw;
+    width: 100%;
     min-width: 400px;
     height: 100vh;
     min-height: 300px;
@@ -31,30 +31,51 @@ header {
     justify-content: space-evenly;
 }
 #top a:link {
-    color: #222222;
+    color: #222;
     text-decoration: none;
 }
 #top a:visited{
-    color: black;
+    color: #222;
     text-decoration: none;
-}
+} 
 
 #head-left {
     width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 23px;
+    margin-left: 26px;
+}
+#head-left > * {
+    padding-right: 20px;
 }
 #head-right {
     width: 50%;
-text-align: right;
+display:flex;
+justify-content: flex-end;
 font-size: 13px;
+margin-top: 11px;
+vertical-align: text-bottom;
+margin-right: 15px;
 }
+#head-right > * {
+ margin-left: 7px;
+}
+.link-right {
+margin-top: 12px;
+margin-right: 8px;
+}
+
 button[type="button"] {
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
 #apps-button {
-padding: 5px 4px 2px 4px;
-border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 11px;
 }
 #apps-button:hover {
     background-color: rgba(12, 76, 124, 0.08);
@@ -67,7 +88,7 @@ border-radius: 50%;
 #margin-top {
     width: 1px;
     min-height: 60px;
-    max-height: 213px;
+    max-height: 205px;
     flex-shrink: 100;
     flex-grow: 1;
 }
@@ -98,22 +119,27 @@ form {
 }
 #search-bar-w-icon {
     width: 100%;
-    max-width: 584px;
-    height: 44px;
+    max-width: 645px;
+    min-width: 408px;
+    height: 46px;
     display: flex;
     flex-wrap: nowrap;
     margin: 0 auto;
     margin-top: 25px;
     margin-bottom: 30px;
+    
+}
+#search-bar::-webkit-search-cancel-button{
+display: none;
 }
 #search-bar {
     margin: 0;
-    width: inherit;
+    width: 100%;
     outline: none;
     border: 1px solid #dfe1e5;
     border-radius: 24px;
     padding: 10px 30px;
-    padding-left: 45px;
+    padding-left: 60px;
     font-size: 16px;
 }
 #search-bar:hover, #search-bar:active {
@@ -142,12 +168,16 @@ right: 48px;
 }
 
 button[type="submit"] {
-    padding: 9px 14px;
+    padding: 0 16px;
+    height: 36px;
     margin: 0px;
     border: 1px solid #f8f9fa;
     background-color: #f8f9fa;
-    color: #202124;
+    color: #3c4043;
     border-radius: 4px;
+    cursor: pointer;
+    line-height: 27px;
+    text-rendering: auto;
 }
 button[type="submit"]:hover {
     background-color: #f8f9fa;
@@ -161,12 +191,12 @@ button[type="submit"]:hover {
     justify-content: center;
 }
 #spacing-buttons {
-    width: 14px;
+    width: 11px;
 }
 
 #bottom {
     width: 100%;
-    position:absolute;
+    position: absolute;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -186,8 +216,35 @@ button[type="submit"]:hover {
     text-decoration: underline;
 }
 #foot-left {
-
+width: 50%;
+min-width: 294px;
+display: flex;
+justify-content: space-evenly;
+padding: 0;
+white-space: nowrap;
 }
 
 #foot-right {
+    width:50%;
+    min-width: 294px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    white-space: nowrap;
+}
+#bottom a{
+    padding: 15px;
+}
+
+
+#spacing-bottom {
+    width: 0;
+}
+@media screen and (min-width:1200px) {
+    #foot-left {
+        justify-content: flex-start;
+    }
+    #foot-right {
+        justify-content: flex-end;
+    }
 }
